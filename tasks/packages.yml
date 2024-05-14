@@ -2,6 +2,7 @@
   apt:
     name:
       - chromium
+      - vlc
   
 - name: Remove packages
   apt:
