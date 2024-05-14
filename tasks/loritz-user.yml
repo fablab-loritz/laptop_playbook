@@ -2,8 +2,7 @@
   user:
     name: loritz
     comment: Loritz
-    expires: -1
-    password: loritz
+    password: "{{ 'loritz' | password_hash('sha512') }}"
     state: present
 
 - name: copie fichier connection auto
