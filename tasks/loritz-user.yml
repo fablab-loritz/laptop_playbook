@@ -21,13 +21,13 @@
     group: root
  
 - name: set wallpaper
-    become_user: loritz
-    dconf:
-       key: "/org/cinnamon/desktop/background/picture-uri"
-       value: "'file:///usr/share/backgrounds/fond-loritz.jpg'"
+  become_user: loritz
+  dconf:
+      key: "/org/cinnamon/desktop/background/picture-uri"
+      value: "'file:///usr/share/backgrounds/fond-loritz.jpg'"
  
 - name: set wallpaper position
-    become_user: loritz
-    dconf:
-      key: "/org/cinnamon/desktop/background/picture-options"
-      value: "'zoom'"
+  become_user: loritz
+  dconf:
+    key: "/org/cinnamon/desktop/background/picture-options"
+    value: "'zoom'"
