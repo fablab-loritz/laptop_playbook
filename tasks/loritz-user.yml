@@ -4,21 +4,21 @@
     password: loritz
 
 - name: copie fichier connection auto
-    copy:
-      src: files/lightdm.conf
-      dest: /etc/lightdm/lightdm.conf
-      owner: root
-      group: root
-      mode: 0644
+  copy:
+    src: files/lightdm.conf
+    dest: /etc/lightdm/lightdm.conf
+    owner: root
+    group: root
+    mode: 0644
 
 
 
 - name: copy wallpaper file
-    copy:
-      src: files/Fond-loritz-Spiral-Betty_v2.jpg
-      dest: /usr/share/backgrounds/fond-loritz.jpg
-      owner: root
-      group: root
+  copy:
+    src: files/Fond-loritz-Spiral-Betty_v2.jpg
+    dest: /usr/share/backgrounds/fond-loritz.jpg
+    owner: root
+    group: root
  
 - name: set wallpaper
     become_user: loritz
