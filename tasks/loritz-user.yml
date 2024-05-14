@@ -1,6 +1,8 @@
 - name: creation utilisateur courant
   user:
     name: loritz
+    comment: Loritz
+    expires: -1
     password: loritz
 
 - name: copie fichier connection auto
