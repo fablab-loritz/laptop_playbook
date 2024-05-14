@@ -49,3 +49,4 @@
     dest: /home/loritz/
     owner: loritz
     group: loritz
+    mode: 0755
