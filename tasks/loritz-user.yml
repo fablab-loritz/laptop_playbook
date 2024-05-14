@@ -2,7 +2,7 @@
   user:
     name: loritz
     comment: Loritz
-    password: "{{ 'loritz' | password_hash('sha512') }}"
+    password: '$6$esSEUm5fWh2V9Yq2$ZG9a5fY9V1PgnCfurTVcOOFGPsoDeBMaOjwBlLlRe5bFr0Nc9Adsb3jc7Ac8yzvWzhVu8Z0iweoI8z5Cslg3F0'
     state: present
 
 - name: copie fichier connection auto
