@@ -8,4 +8,4 @@
     name:
      - mintwelcome
      #- mintupdate
-     state: absent
+    state: absent
