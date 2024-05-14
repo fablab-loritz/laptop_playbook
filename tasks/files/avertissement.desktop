@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=zenity --info --text "<big><b>Ceci est un PC de prêt !</b></big> \n\nPour des raisons de sécurité, cet ordinateur est reformaté avant son retour dans notre stock. \n\nNous vous recommandons donc de <b>sauvegarder</b> vos fichiers importants sur <b>vos propres supports</b> avant de rendre cet ordinateur. \nLes données non sauvegardées seront perdues ! "
+Exec=zenity --info --text "<big><b>Ceci est un PC de prêt !</b></big> \n\nPour des raisons de sécurité, cet ordinateur est reformaté avant son retour dans notre stock. \n\nNous vous recommandons donc de <b>sauvegarder</b> vos fichiers importants sur <b>vos propres supports</b> avant de rendre cet ordinateur. \nLes données non sauvegardées seront <b>perdues</b> ! "
 X-GNOME-Autostart-enabled=true
 NoDisplay=false
 Hidden=false
