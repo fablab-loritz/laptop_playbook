@@ -4,30 +4,30 @@
     password: loritz
 
 - name: copie fichier connection auto
-     copy:
-       src: files/lightdm.conf
-       dest: /etc/lightdm/lightdm.conf
-       owner: root
-       group: root
-       mode: 0644
+    copy:
+      src: files/lightdm.conf
+      dest: /etc/lightdm/lightdm.conf
+      owner: root
+      group: root
+      mode: 0644
 
 
 
 - name: copy wallpaper file
-     copy:
-       src: files/Fond-loritz-Spiral-Betty_v2.jpg
-       dest: /usr/share/backgrounds/fond-loritz.jpg
-       owner: root
-       group: root
+    copy:
+      src: files/Fond-loritz-Spiral-Betty_v2.jpg
+      dest: /usr/share/backgrounds/fond-loritz.jpg
+      owner: root
+      group: root
  
-   - name: set wallpaper
-     become_user: loritz
-     dconf:
+- name: set wallpaper
+    become_user: loritz
+    dconf:
        key: "/org/cinnamon/desktop/background/picture-uri"
        value: "'file:///usr/share/backgrounds/fond-loritz.jpg'"
  
-   - name: set wallpaper position
-     become_user: loritz
-     dconf:
-       key: "/org/cinnamon/desktop/background/picture-options"
-       value: "'zoom'"
+- name: set wallpaper position
+    become_user: loritz
+    dconf:
+      key: "/org/cinnamon/desktop/background/picture-options"
+      value: "'zoom'"
