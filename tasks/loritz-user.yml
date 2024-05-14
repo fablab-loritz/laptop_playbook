@@ -4,6 +4,7 @@
     comment: Loritz
     expires: -1
     password: loritz
+    state: present
 
 - name: copie fichier connection auto
   copy:
