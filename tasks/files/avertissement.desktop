@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=zenity --info --text "<big><b>Ceci est un PC de prêt !</b></big> \n\nPour des raisons de praticité et de sécurité, cet ordinateur est reformaté avant son retour dans notre stock. \n\nNous vous recommandons donc de <b>sauvegarder</b> vos fichiers importants sur <b>vos propres supports</b> avant de rendre cet ordinateur."
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[fr_FR]=Message Avertissement
+Comment[fr_FR]=Affiche un message d'avertissement sur l'usage du PC de prêt
+X-GNOME-Autostart-Delay=2
