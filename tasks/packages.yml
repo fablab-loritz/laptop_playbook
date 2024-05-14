@@ -2,3 +2,10 @@
   apt:
     name:
       - chromium
+  
+- name: Remove packages
+  apt:
+    name:
+     - mintwelcome
+     #- mintupdate
+     state: absent

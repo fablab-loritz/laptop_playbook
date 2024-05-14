@@ -34,3 +34,18 @@
   dconf:
     key: "/org/cinnamon/desktop/background/picture-options"
     value: "'zoom'"
+
+- name: Desactiver welcome
+  become_user: loritz
+  dconf:
+    key: "/com/linuxmint/updates/refresh-schedule-enabled"
+    value: "false"
+
+
+
+- name: Copie Bureau
+  copy:
+    src: files/Bureau
+    dest: /home/loritz/
+    owner: loritz
+    group: loritz
