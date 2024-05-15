@@ -58,3 +58,11 @@
     owner: loritz
     group: loritz
     mode: 0755
+
+- name: Copie config MIME
+  copy:
+    src: files/mimeapps.list
+    dest: /home/loritz/.config/
+    owner: loritz
+    group: loritz
+    mode: 0755
