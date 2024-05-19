@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Microsoft 365
+Exec=firefox https://www.microsoft365.com/
+Comment=Microsoft Office en ligne
+Terminal=false
+Icon=microsoft
+Type=Application
