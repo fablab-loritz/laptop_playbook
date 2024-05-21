@@ -67,3 +67,12 @@
     owner: loritz
     group: loritz
     mode: 0755
+
+
+- name: Copie config Libreoffice
+  copy:
+    src: files/microsoft_365.png
+    dest: /usr/share/pixmaps/
+    owner: root
+    group: root
+    mode: 0755
