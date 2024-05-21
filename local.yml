@@ -10,7 +10,7 @@
       changed_when: False
 
   tasks:
-    - include: tasks/users.yml
-    - include: tasks/cron.yml
-    - include: tasks/packages.yml
-    - include: tasks/loritz-user.yml
+    - include_tasks: tasks/users.yml
+    - include_tasks: tasks/cron.yml
+    - include_tasks: tasks/packages.yml
+    - include_tasks: tasks/loritz-user.yml
