@@ -69,10 +69,18 @@
     mode: 0755
 
 
-- name: Copie config Libreoffice
+- name: Copie logo Microsoft 365
   copy:
     src: files/microsoft_365.png
     dest: /usr/share/pixmaps/
     owner: root
     group: root
+    mode: 0755
+
+- name: Copie config LibreOffice
+  copy:
+    src: files/registrymodifications.xcu
+    dest: /home/axel/.config/libreoffice/4/user/
+    owner: loritz
+    group: loritz
     mode: 0755
