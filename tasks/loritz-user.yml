@@ -71,7 +71,7 @@
 
 - name: Copie logos
   copy:
-    src: files/pixmaps/*
+    src: files/pixmaps/
     dest: /usr/share/pixmaps/
     owner: root
     group: root
