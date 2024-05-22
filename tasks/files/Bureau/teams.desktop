@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Microsoft Teams
+Exec=chromium --app=https://teams.microsoft.com/v2/ --start-maximized
+Comment=Microsoft Teams version Web
+Terminal=false
+Icon=microsoft_teams
+Type=Application
