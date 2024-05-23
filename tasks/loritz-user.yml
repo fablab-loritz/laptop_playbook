@@ -47,6 +47,11 @@
     key: "/com/linuxmint/updates/refresh-schedule-enabled"
     value: "false"
 
+- name: Temps avant veille 30 min
+  become_user: loritz
+  dconf:
+    key: "/org/cinnamon/desktop/session/idle-delay"
+    value: 'uint32 1800'
 
 
 - name: Copie Bureau
