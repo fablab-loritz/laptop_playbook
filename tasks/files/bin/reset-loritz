@@ -30,7 +30,7 @@ userdel -r -f loritz
 ansible-pull -U https://git.axolito.fr/Axel/laptop_playbook.git
 
 echo ""
-echo "*****  Réinitialisation terminée  *****"
+echo "*****       Réinitialisation terminée       *****"
 echo ""
 echo "*****  Le PC va redémarrer dans 5 secondes  *****"
 echo ""
