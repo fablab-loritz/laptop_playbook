@@ -9,7 +9,8 @@
 - name: Ajout loritz à ses groupes
   user:
    name: loritz
-   groups: loritz,nopasswdlogin
+   #groups: loritz,nopasswdlogin
+   groups: loritz
 
 - name: copie fichier connection auto
   copy:
