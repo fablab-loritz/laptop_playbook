@@ -1,0 +1,7 @@
+- name: Copie scriptes vers bin
+  copy:
+    src: files/bin/
+    dest: /usr/bin/
+    owner: root
+    group: root
+    mode: 0755

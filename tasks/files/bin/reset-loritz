@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Test si root
+if [ "$EUID" -ne 0 ]
+  then echo "Merci d'éxécuter en tant que root"
+  exit
+fi
+
+# Demande confirmation
+while true; do
+
+read -p "Etes vous sûr de vouloir réinitialiser l'utilisateur loritz ? (y/n) " yn
+
+case $yn in 
+    [yY] ) echo "OK, nous allons commencer !";
+		break;;
+	[nN] ) echo "Ah... Dommage";
+		exit;;
+	* ) echo Réponse invalide;;
+esac
+
+done
+
+# Début du travail
+echo ""
+echo "*****  Réinitialisation de l'utilisateur loritz  *****"
+echo ""
+
+userdel -r -f loritz
+ansible-pull -U https://git.axolito.fr/Axel/laptop_playbook.git
+
+echo ""
+echo "*****  Réinitialisation terminée  *****"
+echo ""
+echo "*****  Le PC va redémarrer dans 5 secondes  *****"
+echo ""
+
+sleep 5s
+reboot
