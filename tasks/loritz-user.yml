@@ -24,8 +24,8 @@
 
 - name: copy wallpaper file
   copy:
-    src: files/Fond-loritz-Spiral-Betty_v2.jpg
-    dest: /usr/share/backgrounds/fond-loritz.jpg
+    src: files/Fond-loritz-Spiral-Betty_v3.png
+    dest: /usr/share/backgrounds/fond-loritz.png
     owner: root
     group: root
  
@@ -33,7 +33,7 @@
   become_user: loritz
   dconf:
       key: "/org/cinnamon/desktop/background/picture-uri"
-      value: "'file:///usr/share/backgrounds/fond-loritz.jpg'"
+      value: "'file:///usr/share/backgrounds/fond-loritz.png'"
  
 - name: set wallpaper position
   become_user: loritz
