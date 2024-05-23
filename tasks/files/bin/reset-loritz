@@ -23,10 +23,16 @@ done
 
 # Début du travail
 echo ""
-echo "*****  Réinitialisation de l'utilisateur loritz  *****"
+echo "*****  Suppression de l'utilisateur loritz  *****"
 echo ""
 
 userdel -r -f loritz
+sleep 5s
+
+echo ""
+echo "*****  Réinitialisation de l'utilisateur loritz  *****"
+echo ""
+
 ansible-pull -U https://git.axolito.fr/Axel/laptop_playbook.git
 
 echo ""
