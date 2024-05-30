@@ -1,0 +1,4 @@
+- name: Suppression dossier utilisateur axel
+  file:
+    path: /home/axel
+    state: absent
