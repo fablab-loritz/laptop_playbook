@@ -30,6 +30,12 @@ userdel -r -f loritz
 sleep 5s
 
 echo ""
+echo "*****  Suppression config réseau  *****"
+echo ""
+
+rm -r /etc/NetworkManager/system-connections/*
+
+echo ""
 echo "*****  Réinitialisation de l'utilisateur loritz  *****"
 echo ""
 
