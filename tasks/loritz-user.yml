@@ -90,7 +90,7 @@
 - name: Copie config LibreOffice
   copy:
     src: files/registrymodifications.xcu
-    dest: /home/axel/.config/libreoffice/4/user/
+    dest: /home/loritz/.config/libreoffice/4/user/
     owner: loritz
     group: loritz
     mode: 0755
