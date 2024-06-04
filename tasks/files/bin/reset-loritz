@@ -6,6 +6,17 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+# Test si accès à Internet
+echo "Test d'accès à Internet..."
+if ping -q -c 1 -W 1 8.8.8.8 >/dev/null; then
+  echo "Accès à internet OK"
+else
+  echo "Pas d'accès à internet !"
+  echo "Merci de connecter ce PC à internet avant d'éxécuter ce programme"
+  exit
+fi
+
+
 # Demande confirmation
 while true; do
 
