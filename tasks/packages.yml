@@ -8,5 +8,5 @@
   apt:
     name:
      - mintwelcome
-     #- mintupdate
+     - mintupdate
     state: absent
