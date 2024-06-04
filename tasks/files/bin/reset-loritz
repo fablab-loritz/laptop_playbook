@@ -50,7 +50,7 @@ echo ""
 echo "*****  Réinitialisation de l'utilisateur loritz  *****"
 echo ""
 
-su ansible -c "ansible-pull -U https://git.axolito.fr/Axel/laptop_playbook.git"
+su ansible -c "sudo ansible-pull -U https://git.axolito.fr/Axel/laptop_playbook.git"
 
 echo ""
 echo "*****       Réinitialisation terminée       *****"
