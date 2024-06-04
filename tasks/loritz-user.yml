@@ -41,12 +41,6 @@
     key: "/org/cinnamon/desktop/background/picture-options"
     value: "'zoom'"
 
-- name: Desactiver welcome
-  become_user: loritz
-  dconf:
-    key: "/com/linuxmint/updates/refresh-schedule-enabled"
-    value: "false"
-
 - name: Temps avant veille 30 min
   become_user: loritz
   dconf:
