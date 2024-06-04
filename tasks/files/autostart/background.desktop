@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=dconf write /org/cinnamon/desktop/background/picture-uri "'file:///usr/share/backgrounds/fond-loritz.png'"
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[fr_FR]=Fond d'ecran Loritz
+Comment[fr_FR]=Change le fond d'écran pour celui de loritz
+X-GNOME-Autostart-Delay=2

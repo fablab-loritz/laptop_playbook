@@ -56,10 +56,10 @@
     group: loritz
     mode: 0755
 
-- name: Copie message pret
+- name: Copie autostart
   copy:
-    src: files/avertissement.desktop
-    dest: /home/loritz/.config/autostart/
+    src: files/autostart
+    dest: /home/loritz/.config/
     owner: loritz
     group: loritz
     mode: 0755
