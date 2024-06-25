@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Partage
+Exec=chromium https://teams.microsoft.com/v2/
+Comment=Partage AC Nancy Metz
+Terminal=false
+Icon=ac-partage
+Type=Application
