@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Partage
-Exec=chromium https://partage.ac-nancy-metz.fr/
+Exec=chromium --no-default-browser-check https://partage.ac-nancy-metz.fr/
 Comment=Partage AC Nancy Metz
 Terminal=false
 Icon=ac-partage
