@@ -88,3 +88,12 @@
     owner: loritz
     group: loritz
     mode: 0755
+
+
+- name: Monte partage NFS
+  ansible.posix.mount:
+    src: 192.168.8.251:/ECHANGE-INSCRIPTIONS
+    path: /mnt/ECHANGE-INSCRIPTIONS
+    opts: rw,sync,hard
+    state: mounted
+    fstype: nfs

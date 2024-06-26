@@ -3,6 +3,7 @@
     name:
       - chromium
       - vlc
+      - nfs-common
   
 - name: Remove packages
   apt:
