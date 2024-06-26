@@ -95,5 +95,5 @@
     src: 192.168.8.251:/ECHANGE-INSCRIPTIONS
     path: /mnt/ECHANGE-INSCRIPTIONS
     opts: rw,sync,hard
-    state: mounted
+    state: ephemeral
     fstype: nfs
