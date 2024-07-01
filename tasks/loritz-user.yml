@@ -66,6 +66,7 @@
     dest: /home/loritz/Bureau/
     delete: true
     recursive: true
+  delegate_to: localhost
 
 #- name: Copie Bureau
 #  copy:
