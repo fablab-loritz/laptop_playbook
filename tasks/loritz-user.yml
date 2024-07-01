@@ -53,13 +53,6 @@
 #    state: directory
 #    mode: '0555'
 
-- name: Bureau en lecture seule
-  ansible.builtin.file:
-    path: /home/loritz/Bureau
-    owner: ansible
-    group: ansible
-    mode: '0555'
-
 - name: Sync du Bureau
   ansible.posix.synchronize:
     src: tasks/files/Bureau/
@@ -67,6 +60,14 @@
     delete: true
     recursive: true
   delegate_to: localhost
+
+- name: Bureau en lecture seule
+  ansible.builtin.file:
+    path: /home/loritz/Bureau
+    owner: ansible
+    group: ansible
+    mode: '0555'
+    recurse: yes
 
 #- name: Copie Bureau
 #  copy:
