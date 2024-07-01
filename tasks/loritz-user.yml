@@ -47,6 +47,11 @@
     key: "/org/cinnamon/desktop/session/idle-delay"
     value: 'uint32 1800'
 
+#- name: Create a directory if it does not exist
+#  ansible.builtin.file:
+#    path: /home/loritz/Bureau
+#    state: directory
+#    mode: '0555'
 
 - name: Bureau en lecture seule
   ansible.builtin.file:
@@ -57,7 +62,7 @@
 
 - name: Sync du Bureau
   ansible.posix.synchronize:
-    src: files/Bureau
+    src: files/Bureau/
     dest: /home/loritz/Bureau
     delete: true
     recursive: true
