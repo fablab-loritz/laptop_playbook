@@ -48,13 +48,29 @@
     value: 'uint32 1800'
 
 
-- name: Copie Bureau
-  copy:
+- name: Bureau en lecture seule
+  ansible.builtin.file:
+    path: /home/loritz/Bureau
+    owner: ansible
+    group: ansible
+    mode: '0555'
+
+- name: Sync du Bureau
+  ansible.posix.synchronize:
     src: files/Bureau
-    dest: /home/loritz/
-    owner: loritz
-    group: loritz
-    mode: 0755
+    dest: /home/loritz/Bureau
+    delete: true
+    recursive: true
+
+#- name: Copie Bureau
+#  copy:
+#    src: files/Bureau
+#    dest: /home/loritz/
+#    owner: loritz
+#    group: loritz
+#    mode: 0755
+
+
 
 - name: Copie autostart
   copy:
@@ -88,12 +104,3 @@
     owner: loritz
     group: loritz
     mode: 0755
-
-
-- name: Monte partage NFS
-  ansible.posix.mount:
-    src: 192.168.8.251:/ECHANGE-INSCRIPTIONS
-    path: /mnt/ECHANGE-INSCRIPTIONS
-    opts: rw,sync,hard
-    state: ephemeral
-    fstype: nfs
