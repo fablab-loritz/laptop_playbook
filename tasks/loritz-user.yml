@@ -66,7 +66,6 @@
     dest: /home/loritz/Bureau
     delete: true
     recursive: true
-    delegate_to: "{{ inventory_hostname }}"
 
 #- name: Copie Bureau
 #  copy:
