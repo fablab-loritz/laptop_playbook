@@ -62,7 +62,7 @@
 
 - name: Sync du Bureau
   ansible.posix.synchronize:
-    src: files/Bureau/
+    src: tasks/files/Bureau/
     dest: /home/loritz/Bureau/
     delete: true
     recursive: true
