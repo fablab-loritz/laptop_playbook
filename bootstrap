@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo ""
+echo "*****  Préparation Préliminaire  *****"
+echo ""
+
+apt-add-repository ppa:ansible/ansible -y
+apt update
+apt full-upgrade -y
+
+apt install ansible git -y
+
+echo ""
+echo "*****  Provisionnement Initiale  *****"
+echo ""
+
+ansible-pull -U https://git.axolito.fr/Axel/laptop_playbook.git
+
+echo ""
+echo "*****       Provisionnement Terminé       *****"
+echo "***** Vous pouvez redémarrer l'ordianteur *****"
+echo ""
