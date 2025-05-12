@@ -14,7 +14,7 @@ echo ""
 echo "*****  Provisionnement Initiale  *****"
 echo ""
 
-ansible-pull -U https://git.axolito.fr/Axel/laptop_playbook.git
+ansible-pull -U https://github.com/fablab-loritz/laptop_playbook.git
 
 echo ""
 echo "*****       Provisionnement Terminé       *****"
