@@ -4,4 +4,4 @@
     dest: /usr/bin/
     owner: root
     group: root
-    mode: 0710
+    mode: 0711
