@@ -4,6 +4,7 @@
       - chromium
       - vlc
       - nfs-common
+      - iptables-persistent
   
 - name: Remove packages
   apt:

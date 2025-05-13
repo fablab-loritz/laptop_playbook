@@ -1,0 +1,46 @@
+#!/bin/bash
+
+LOG_FILE="/var/log/mode-examen.log"
+DATE=$(date "+%Y-%m-%d %H:%M:%S")
+
+log() {
+    echo "[$DATE] $1" | tee -a "$LOG_FILE"
+}
+
+if [[ "$EUID" -ne 0 ]]; then
+    echo "Ce script doit être exécuté en tant que root." >&2
+    exit 1
+fi
+
+if [[ "$1" == "on" ]]; then
+    log "Activation du mode examen : blocage réseau"
+    iptables -P INPUT DROP
+    iptables -P FORWARD DROP
+    iptables -P OUTPUT DROP
+    nmcli networking off
+    if command -v iptables-save >/dev/null 2>&1; then
+        iptables-save > /etc/iptables/rules.v4
+        log "Règles iptables enregistrées (/etc/iptables/rules.v4)"
+    else
+        log "iptables-save non disponible. Règles non sauvegardées"
+    fi
+    log "Mode examen activé"
+
+elif [[ "$1" == "off" ]]; then
+    log "Désactivation du mode examen : restauration du réseau"
+    iptables -P INPUT ACCEPT
+    iptables -P FORWARD ACCEPT
+    iptables -P OUTPUT ACCEPT
+    nmcli networking on
+    if command -v iptables-save >/dev/null 2>&1; then
+        iptables-save > /etc/iptables/rules.v4
+        log "Règles iptables enregistrées (/etc/iptables/rules.v4)"
+    else
+        log "iptables-save non disponible. Règles non sauvegardées"
+    fi
+    log "Mode examen désactivé"
+
+else
+    echo "Usage : sudo mode-examen on|off"
+    exit 1
+fi
