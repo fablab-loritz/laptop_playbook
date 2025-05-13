@@ -12,6 +12,9 @@ if [[ "$EUID" -ne 0 ]]; then
     exit 1
 fi
 
+
+# Option "on"
+
 if [[ "$1" == "on" ]]; then
     log "Activation du mode examen : blocage réseau"
     iptables -P INPUT DROP
@@ -28,6 +31,9 @@ if [[ "$1" == "on" ]]; then
     fi
     log "Mode examen activé"
 
+
+# Option "off"
+
 elif [[ "$1" == "off" ]]; then
     log "Désactivation du mode examen : restauration du réseau"
     iptables -P INPUT ACCEPT
@@ -43,6 +49,9 @@ elif [[ "$1" == "off" ]]; then
         log "iptables-save non disponible. Règles non sauvegardées"
     fi
     log "Mode examen désactivé"
+
+
+# Autre option
 
 else
     echo "Usage : sudo mode-examen on|off"

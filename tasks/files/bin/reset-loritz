@@ -32,7 +32,7 @@ esac
 
 done
 
-# Début du travail
+# Début de la tâche
 echo ""
 echo "*****  Suppression de l'utilisateur loritz  *****"
 echo ""
