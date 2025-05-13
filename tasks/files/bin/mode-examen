@@ -17,6 +17,8 @@ if [[ "$1" == "on" ]]; then
     iptables -P INPUT DROP
     iptables -P FORWARD DROP
     iptables -P OUTPUT DROP
+    iptables -A INPUT -i lo -j ACCEPT
+    iptables -A OUTPUT -o lo -j ACCEPT
     nmcli networking off
     if command -v iptables-save >/dev/null 2>&1; then
         iptables-save > /etc/iptables/rules.v4
@@ -31,6 +33,8 @@ elif [[ "$1" == "off" ]]; then
     iptables -P INPUT ACCEPT
     iptables -P FORWARD ACCEPT
     iptables -P OUTPUT ACCEPT
+    iptables -A INPUT -i lo -j ACCEPT
+    iptables -A OUTPUT -o lo -j ACCEPT
     nmcli networking on
     if command -v iptables-save >/dev/null 2>&1; then
         iptables-save > /etc/iptables/rules.v4
