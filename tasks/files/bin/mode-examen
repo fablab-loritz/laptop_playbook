@@ -51,9 +51,15 @@ elif [[ "$1" == "off" ]]; then
     log "Mode examen désactivé"
 
 
+# Option "log"
+
+elif [[ "$1" == "log" ]]; then
+    tail $LOG_FILE
+
+
 # Autre option
 
 else
-    echo "Usage : sudo mode-examen on|off"
+    echo "Usage : sudo mode-examen on|off|log"
     exit 1
 fi
