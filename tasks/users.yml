@@ -3,10 +3,11 @@
     name: ansible
     system: yes
 
-- name: copy sudoers_ansible
-  copy:
-    src: files/sudoers_ansible
+- name: Create sudoers file for ansible
+  ansible.builtin.copy:
     dest: /etc/sudoers.d/ansible
+    content: |
+      ansible ALL=(ALL) NOPASSWD:ALL
     owner: root
     group: root
-    mode: 0440
+    mode: '0440'
