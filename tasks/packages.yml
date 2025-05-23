@@ -1,3 +1,12 @@
+- name: Configure apt-cache
+  ansible.builtin.copy:
+    dest: /etc/apt/apt.conf.d/02proxy
+    content: |
+      Acquire::http::Proxy "http://apt-cache.fab:3142";
+    owner: root
+    group: root
+    mode: '0644'
+
 - name: Install packages
   apt:
     name:
@@ -12,15 +21,6 @@
      - mintwelcome
      - mintupdate
     state: absent
-
-- name: Configure apt-cache
-  ansible.builtin.copy:
-    dest: /etc/apt/apt.conf.d/02proxy
-    content: |
-      Acquire::http::Proxy "http://apt-cache.fab:3142";
-    owner: root
-    group: root
-    mode: '0644'
 
 - name: Add Flathub repository
   community.general.flatpak_remote:
