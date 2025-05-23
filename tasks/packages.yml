@@ -31,6 +31,8 @@
 
 - name: Install ONLYOFFICE Desktop Editors via Flatpak
   community.general.flatpak:
-    name: org.onlyoffice.desktopeditors
+    name:
+      - org.onlyoffice.desktopeditors
+      - org.localsend.localsend_app
     remote: flathub
     state: present
