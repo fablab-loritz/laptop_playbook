@@ -30,7 +30,6 @@
       - vlc
       - nfs-common
       - iptables-persistent
-      - netcat
   
 - name: Remove packages
   apt:
