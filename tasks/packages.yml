@@ -1,8 +1,24 @@
+- name: Script detect_proxy.sh
+  ansible.builtin.copy:
+    dest: /etc/apt/detect_proxy.sh
+    content: |
+      #!/usr/bin/env bash
+      proxy=apt-cache.fab
+      port=3142
+      if nc -zw1 "$proxy" "$port" 2>/dev/null; then
+          echo "http://$proxy:$port/"
+      else
+          echo "DIRECT"
+      fi
+    owner: root
+    group: root
+    mode: '0755'
+
 - name: Configure apt-cache
   ansible.builtin.copy:
     dest: /etc/apt/apt.conf.d/02proxy
     content: |
-      Acquire::http::Proxy "http://apt-cache.fab:3142";
+      Acquire::http::Proxy-Auto-Detect "/etc/apt/detect_proxy.sh";
     owner: root
     group: root
     mode: '0644'
@@ -14,6 +30,7 @@
       - vlc
       - nfs-common
       - iptables-persistent
+      - netcat
   
 - name: Remove packages
   apt:
