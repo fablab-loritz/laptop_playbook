@@ -23,6 +23,14 @@
     group: root
     mode: '0644'
 
+- name: Copy source list
+  ansible.builtin.copy:
+    src: files/official-package-repositories.list
+    dest: /etc/apt/source.list.d/
+    owner: root
+    group: root
+    mode: '0644'
+
 - name: Install packages
   apt:
     name:
