@@ -18,7 +18,7 @@
   ansible.builtin.copy:
     dest: /etc/apt/apt.conf.d/02proxy
     content: |
-      Acquire::http::Proxy-Auto-Detect "/etc/apt/detect_proxy.sh";
+      #Acquire::http::Proxy-Auto-Detect "/etc/apt/detect_proxy.sh";
     owner: root
     group: root
     mode: '0644'
