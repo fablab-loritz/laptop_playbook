@@ -5,9 +5,9 @@ echo "*****  Préparation Préliminaire  *****"
 echo ""
 
 
-echo 'Acquire::http::Proxy "http://apt-cache.fab:3142";' > /etc/apt/apt.conf.d/02proxy
-chown root:root /etc/apt/apt.conf.d/02proxy
-chmod 644 /etc/apt/apt.conf.d/02proxy
+#echo 'Acquire::http::Proxy "http://apt-cache.fab:3142";' > /etc/apt/apt.conf.d/02proxy
+#chown root:root /etc/apt/apt.conf.d/02proxy
+#chmod 644 /etc/apt/apt.conf.d/02proxy
 
 apt-add-repository ppa:ansible/ansible -y
 apt update
