@@ -3,6 +3,11 @@
     path: /home/axel
     state: absent
 
+- name: Suppression mauvais dossier source
+  file:
+    path: /etc/apt/source.list.d
+    state: absent
+
 - name: Nettoie fstab
   ansible.posix.mount:
     path: /mnt/ECHANGE-INSCRIPTIONS
