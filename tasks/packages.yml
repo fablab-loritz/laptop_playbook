@@ -43,6 +43,7 @@
       - vlc
       - nfs-common
       - iptables-persistent
+      - thonny
   
 - name: Remove packages
   apt:
