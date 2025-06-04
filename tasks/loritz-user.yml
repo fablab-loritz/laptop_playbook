@@ -77,6 +77,12 @@
     group: administrateur
     mode: '0755'
 
+- name: Ajouter le droit d'exécution pour "others" sur /home/loritz
+  file:
+    path: /home/loritz
+    mode: '0711'
+    state: directory
+
 
 #- name: Copie Bureau
 #  copy:
