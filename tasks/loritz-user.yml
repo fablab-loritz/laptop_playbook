@@ -69,6 +69,22 @@
     mode: 0555
     recurse: yes
 
+- name: Créer le dossier EXAMEN
+  file:
+    path: /home/loritz/Bureau/EXAMEN
+    state: directory
+    owner: administrateur
+    group: administrateur
+    mode: '0750'
+
+- name: Ajouter les permissions lecture seule pour loritz
+  acl:
+    path: /home/loritz/Bureau/EXAMEN
+    entity: loritz
+    etype: user
+    permissions: r
+    state: present
+
 #- name: Copie Bureau
 #  copy:
 #    src: files/Bureau
