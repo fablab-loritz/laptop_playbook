@@ -75,15 +75,8 @@
     state: directory
     owner: administrateur
     group: administrateur
-    mode: '0750'
+    mode: '0755'
 
-- name: Ajouter les permissions lecture seule pour loritz
-  acl:
-    path: /home/loritz/Bureau/EXAMEN
-    entity: loritz
-    etype: user
-    permissions: r
-    state: present
 
 #- name: Copie Bureau
 #  copy:
