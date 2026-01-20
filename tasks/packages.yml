@@ -34,10 +34,11 @@
     method: system
     flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
 
-- name: Install ONLYOFFICE Desktop Editors via Flatpak
+- name: Install Flatpak apps
   community.general.flatpak:
     name:
       - org.onlyoffice.desktopeditors
       - org.localsend.localsend_app
+      - com.vscodium.codium
     remote: flathub
     state: present
