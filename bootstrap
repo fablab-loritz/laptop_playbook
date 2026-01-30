@@ -4,11 +4,6 @@ echo ""
 echo "*****  Préparation Préliminaire  *****"
 echo ""
 
-
-#echo 'Acquire::http::Proxy "http://apt-cache.fab:3142";' > /etc/apt/apt.conf.d/02proxy
-#chown root:root /etc/apt/apt.conf.d/02proxy
-#chmod 644 /etc/apt/apt.conf.d/02proxy
-
 apt-add-repository ppa:ansible/ansible -y
 apt update
 apt full-upgrade -y
@@ -16,12 +11,23 @@ apt full-upgrade -y
 apt install ansible git -y
 
 echo ""
-echo "*****  Provisionnement Initiale  *****"
+echo "*****  Provisionnement Initial  *****"
 echo ""
 
+# Exécution d'ansible
 ansible-pull -U https://github.com/fablab-loritz/laptop_playbook.git
+ANSIBLE_RC=$?
 
 echo ""
-echo "*****       Provisionnement Terminé       *****"
-echo "***** Vous pouvez redémarrer l'ordianteur *****"
-echo ""
+
+if [ $ANSIBLE_RC -ne 0 ]; then
+    echo "*****  ERREUR LORS DU PROVISIONNEMENT  *****"
+    echo "*****   La commande ansible a échoué   *****"
+    echo "*****   Code de retour : $ANSIBLE_RC   *****"
+    echo ""
+    exit $ANSIBLE_RC
+else
+    echo "*****       Provisionnement Terminé       *****"
+    echo "***** Vous pouvez redémarrer l'ordinateur *****"
+    echo ""
+fi
