@@ -29,6 +29,10 @@ if [[ "$1" == "on" ]]; then
     else
         log "iptables-save non disponible. Règles non sauvegardées"
     fi
+
+    log "Creation fichier flag"
+    echo "En mode examen depuis $DATE" > /home/loritz/Bureau/MODE_EXAMEN
+
     log "Mode examen activé"
 
 
@@ -48,6 +52,10 @@ elif [[ "$1" == "off" ]]; then
     else
         log "iptables-save non disponible. Règles non sauvegardées"
     fi
+
+    log "Suppression fichier flag"
+    rm /home/loritz/Bureau/MODE_EXAMEN
+
     log "Mode examen désactivé"
 
 
