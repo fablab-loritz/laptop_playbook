@@ -19,6 +19,7 @@
       - nfs-common
       - iptables-persistent
       - thonny
+      - audacity
   
 - name: Remove packages
   apt:
